@@ -4,6 +4,22 @@ Intraday trading strategy for P3 using structural mean-reversion at long horizon
 
 **Performance (96 OOS days)**: Sharpe 3.27 | Return +10.48% | Net PnL +$1,048 | Max DD $280
 
+## Train Data
+
+The training data (111 days, ~10.3 GB) is available as a **GitHub Release** asset:
+
+1. Go to [Releases](https://github.com/Heyymant/intraday-trading-strategy/releases/tag/v1.0)
+2. Download all 3 zip files (`train_part1.zip`, `train_part2.zip`, `train_part3.zip`)
+3. Extract all into a `train/` directory at the repo root
+
+```bash
+# After downloading all 3 parts:
+mkdir train
+unzip train_part1.zip -d train/
+unzip train_part2.zip -d train/
+unzip train_part3.zip -d train/
+```
+
 ## Requirements
 
 ```
@@ -61,16 +77,19 @@ The trade log CSV contains the following columns:
 ## File Structure
 
 ```
-final_strategy/
-  strategy.py        # Main executable strategy
-  WRITEUP.md         # Quant theory doc (modeling rationale)
-  README.md          # This file
-  analysis.ipynb     # Jupyter notebook with full analysis
+intraday-trading-strategy/
+  strategy.py          # Main executable strategy
+  WRITEUP.md           # Quant theory doc (modeling rationale)
+  README.md            # This file
+  analysis.ipynb       # Jupyter notebook with full evolution story
   Problem statement.pdf
-  output_final/      # Pre-computed results (96 OOS days)
-    results.json     # Summary performance metrics
+  *.png                # Analysis plots referenced by notebook
+  output_final/        # Pre-computed results (96 OOS days)
+    results.json       # Summary performance metrics
     daily_summary.csv
-    trades_*.csv     # Per-day trade logs
+    trades_*.csv       # Per-day trade logs
+  train/               # Download from Releases (see above)
+    1.csv ... 139.csv  # 111 days of intraday price data
 ```
 
 ## Strategy Overview
