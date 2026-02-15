@@ -1,0 +1,36 @@
+{
+  "version": "optimised_mr_alpha",
+  "starting_capital": 10000.0,
+  "final_equity": 11047.583599866892,
+  "total_return_pct": 10.475835998668916,
+  "total_gross_pnl": 1335.3860830664244,
+  "total_tc": 287.80248319953245,
+  "total_net_pnl": 1047.5835998668922,
+  "oos_days": 96,
+  "ann_sharpe": 3.274343504538525,
+  "sortino": 5.655796068674301,
+  "win_rate": 0.46875,
+  "profit_factor": 1.9026670297715025,
+  "avg_trades_per_day": 1.0,
+  "avg_daily_pnl": 10.912329165280127,
+  "std_daily_pnl": 52.904605659240445,
+  "max_cumulative_dd": 280.4303353097674,
+  "calmar": 9.806025217660489,
+  "avg_win": 49.0694725409789,
+  "avg_loss": -36.266958264911196,
+  "tc_gross_ratio": 0.2155200558467967,
+  "monte_carlo": {
+    "sharpe_mean": 3.464847777093445,
+    "sharpe_median": 3.4905479028166133,
+    "sharpe_ci_lo": 0.26768082044838387,
+    "sharpe_ci_hi": 6.46830402577837,
+    "prob_positive": 0.9806,
+    "prob_above_2": 0.8258,
+    "prob_above_3": 0.6204
+  },
+  "permutation_test": {
+    "p_value": 0.0232,
+    "significant_5pct": true,
+    "significant_1pct": false
+  }
+}
